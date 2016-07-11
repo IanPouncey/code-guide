@@ -31,32 +31,53 @@ layout: default
       <li><a href="#css-import">Don't use @import</a></li>
       <li><a href="#css-media-queries">Media query placement</a></li>
       <li><a href="#css-prefixed-properties">Prefixed properties</a></li>
+<!--
       <li><a href="#css-single-declarations">Rules with single declarations</a></li>
+ -->
       <li><a href="#css-shorthand">Shorthand notation</a></li>
+<!--
       <li><a href="#css-nesting">Nesting in Less and Sass</a></li>
       <li><a href="#css-operators">Operators in Less and Sass</a></li>
+ -->
       <li><a href="#css-comments">Comments</a></li>
       <li><a href="#css-classes">Classes</a></li>
       <li><a href="#css-selectors">Selectors</a></li>
+<!--
       <li><a href="#css-organization">Organization</a></li>
+ -->
+    </ul>
+  </div>
+  <div class="col">
+    <h4><a href="#javascript">JavaScript</a></h4>
+    <ul>
+      <li><a href="#javascript-syntax">JavaScript syntax</a></li>
+      <li><a href="#javascript-brace">Brace style</a></li>
+      <li><a href="#javascript-variables">Variables</a></li>
     </ul>
   </div>
 </div>
 
 
-<div class="section" id="golden-rule">
+<div class="section" id="introduction">
   <div class="col">
-    <h2>Golden rule</h2>
-    <p>Enforce these, or your own, agreed upon guidelines at all times. Small or large, call out what's incorrect. For additions or contributions to this Code Guide, please <a href="https://github.com/mdo/code-guide/issues/new">open an issue on GitHub</a>.</p>
-  </div>
-  <div class="col">
-    <blockquote>
-      <p>Every line of code should appear to be written by a single person, no matter the number of contributors.</p>
-    </blockquote>
+    <h2>Introduction</h2>
+    <p>These standards are provided as a guide to contributing to W3 WAI-ARIA APG</p>
+    <p>They are based on <a href="http://codeguide.co/"></a> by <a href="https://github.com/mdo/code-guide">@mdo</a>.
   </div>
 </div>
 
-
+<div class="section" id="golden-rule">
+  <div class="col">
+    <h2>Principles</h2>
+    <p>The following priorities have been used to determine these standards:</p>
+    <ol>
+        <li>Readability / understandability</li>
+        <li>Ease of maintenance</li>
+        <li>Ease of contribution</li>
+        <li>Performance</li>
+    </ol>
+  </div>
+</div>
 
 <div class="heading" id="html">
   <h2>HTML</h2>
@@ -66,8 +87,8 @@ layout: default
   <div class="col">
     <h3>Syntax</h3>
     <ul>
-      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
-      <li>Nested elements should be indented once (two spaces).</li>
+      <li>Use soft tabs with four spaces—they're the only way to guarantee code renders the same in any environment.</li>
+      <li>Nested elements should be indented once (four spaces).</li>
       <li>Always use double quotes, never single quotes, on attributes.</li>
       <li>Don't include a trailing slash in self-closing elements—the <a href="http://dev.w3.org/html5/spec-author-view/syntax.html#syntax-start-tag">HTML5 spec</a> says they're optional.</li>
       <li>Don’t omit optional closing tags (e.g. <code>&lt;/li&gt;</code> or <code>&lt;/body&gt;</code>).</li>
@@ -146,7 +167,7 @@ layout: default
     <p>Strive to maintain HTML standards and semantics, but not at the expense of practicality. Use the least amount of markup with the fewest intricacies whenever possible.</p>
   </div>
 </div>
-
+<!--
 <div class="section" id="html-attribute-order">
   <div class="col">
     <h3>Attribute order</h3>
@@ -165,7 +186,7 @@ layout: default
     {% highlight html %}{% include html/attribute-order.html %}{% endhighlight %}
   </div>
 </div>
-
+ -->
 <div class="section" id="html-boolean-attributes">
   <div class="col">
     <h3>Boolean attributes</h3>
@@ -202,8 +223,6 @@ layout: default
   </div>
 </div>
 
-
-
 <div class="heading" id="css">
   <h2>CSS</h2>
 </div>
@@ -212,7 +231,7 @@ layout: default
   <div class="col">
     <h3>Syntax</h3>
     <ul>
-      <li>Use soft tabs with two spaces—they're the only way to guarantee code renders the same in any environment.</li>
+      <li>Use soft tabs with four spaces—they're the only way to guarantee code renders the same in any environment.</li>
       <li>When grouping selectors, keep individual selectors to a single line.</li>
       <li>Include one space before the opening brace of declaration blocks for legibility.</li>
       <li>Place closing braces of declaration blocks on a new line.</li>
@@ -221,7 +240,7 @@ layout: default
       <li>End all declarations with a semi-colon. The last declaration's is optional, but your code is more error prone without it.</li>
       <li>Comma-separated property values should include a space after each comma (e.g., <code>box-shadow</code>).</li>
       <li>Don't include spaces after commas <em>within</em> <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, or <code>rect()</code> values. This helps differentiate multiple color values (comma, no space) from multiple property values (comma with space).</li>
-      <li>Don't prefix property values or color parameters with a leading zero (e.g., <code>.5</code> instead of <code>0.5</code> and <code>-.5px</code> instead of <code>-0.5px</code>).</li>
+      <li>Do prefix property values or color parameters with a leading zero (e.g., <code>0.5</code> instead of <code>.5</code> and <code>-0.5px</code> instead of <code>-.5px</code>).</li>
       <li>Lowercase all hex values, e.g., <code>#fff</code>. Lowercase letters are much easier to discern when scanning a document as they tend to have more unique shapes.</li>
       <li>Use shorthand hex values where available, e.g., <code>#fff</code> instead of <code>#ffffff</code>.</li>
       <li>Quote attribute values in selectors, e.g., <code>input[type="text"]</code>. <a href="http://mathiasbynens.be/notes/unquoted-attribute-values#css">They’re only optional in some cases</a>, and it’s a good practice for consistency.</li>
@@ -289,7 +308,7 @@ layout: default
     {% highlight css %}{% include css/prefixed-properties.css %}{% endhighlight %}
   </div>
 </div>
-
+<!--
 <div class="section" id="css-single-declarations">
   <div class="col">
     <h3>Single declarations</h3>
@@ -300,7 +319,7 @@ layout: default
     {% highlight css %}{% include css/single-declarations.css %}{% endhighlight %}
   </div>
 </div>
-
+ -->
 <div class="section" id="css-shorthand">
   <div class="col">
     <h3>Shorthand notation</h3>
@@ -320,7 +339,7 @@ layout: default
     {% highlight css %}{% include css/shorthand.css %}{% endhighlight %}
   </div>
 </div>
-
+<!--
 <div class="section" id="css-nesting">
   <div class="col">
     <h3>Nesting in Less and Sass</h3>
@@ -334,7 +353,8 @@ layout: default
     {% highlight scss %}{% include css/nesting.scss %}{% endhighlight %}
   </div>
 </div>
-
+ -->
+ <!--
 <div class="section" id="css-operators">
   <div class="col">
     <h3>Operators in Less and Sass</h3>
@@ -344,7 +364,7 @@ layout: default
     {% highlight scss %}{% include css/operators.scss %}{% endhighlight %}
   </div>
 </div>
-
+ -->
 <div class="section" id="css-comments">
   <div class="col">
     <h3>Comments</h3>
@@ -393,7 +413,7 @@ layout: default
     {% highlight css %}{% include css/selectors.css %}{% endhighlight %}
   </div>
 </div>
-
+<!--
 <div class="section" id="css-organization">
   <div class="col">
     <h3>Organization</h3>
@@ -408,13 +428,61 @@ layout: default
     {% highlight css %}{% include css/organization-comments.css %}{% endhighlight %}
   </div>
 </div>
+ -->
+
+<div class="heading" id="javascript">
+  <h2>JavaScript</h2>
+</div>
+
+<div class="section" id="javascript-syntax">
+  <div class="col">
+    <h3>Syntax</h3>
+    <ul>
+      <li>Use soft tabs with four spaces—they're the only way to guarantee code renders the same in any environment.</li>
+      <li>Do not rely on semi-colon insertion. They may be optional in many places, but your code is more error prone without it.</li>
+      <li>Add one space between function keyword and opening parentheses – this helps to distinguish between a function call (which have no space) and a function declaration / expression.</li>
+      <li>Add commas to the end of the line in lists and object literals, not at the beginning.</li>
+    </ul>
+  </div>
+  <div class="col">
+    {% highlight javascript %}{% include javascript/syntax.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="javascript-brace">
+  <div class="col">
+    <h3>Brace style</h3>
+    <p>Use K&amp;R  1TBS variant positioning of braces, except for not using a cuddled else (similar to Stroustrup style)</p>
+    <ul>
+      <li>Place opening brace is on the same line as the function or control statement.</li>
+      <li>Include one space before the opening brace of blocks for legibility.</li>
+      <li>Place closing braces of blocks on a new line.</li>
+    </ul>
+  </div>
+  <div class="col">
+    {% highlight javascript %}{% include javascript/braces.js %}{% endhighlight %}
+  </div>
+</div>
+
+<div class="section" id="javascript-variables">
+  <div class="col">
+    <h3>Variables</h3>
+    <ul>
+      <li>Variables must be defined, but not neccesarily assigned at the top of the function.</li>
+      <li>Either combined or separate var statements are acceptable</li>
+    </ul>
+  </div>
+  <div class="col">
+    {% highlight javascript %}{% include javascript/variables.js %}{% endhighlight %}
+  </div>
+</div>
 
 <div class="section" id="css-editor-prefs">
   <div class="col">
     <h3>Editor preferences</h3>
     <p>Set your editor to the following settings to avoid common code inconsistencies and dirty diffs:</p>
     <ul>
-      <li>Use soft-tabs set to two spaces.</li>
+      <li>Use soft-tabs set to four spaces.</li>
       <li>Trim trailing white space on save.</li>
       <li>Set encoding to UTF-8.</li>
       <li>Add new line at end of files.</li>

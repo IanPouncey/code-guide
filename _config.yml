@@ -1,5 +1,5 @@
-name:          Code Guide by @mdo
-description:   Standards for developing flexible, durable, and sustainable HTML and CSS.
+name:          APG Coding standards
+description:   Standards for developing contributiong HTML, CSS, and JavaScript to W3 WAI-ARIA APG.
 url:           http://codeguide.co
 
 markdown:      rdiscount
