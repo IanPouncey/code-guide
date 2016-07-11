@@ -1,6 +1,2 @@
 name:          APG Coding standards
 description:   Standards for developing contributiong HTML, CSS, and JavaScript to W3 WAI-ARIA APG.
-
-markdown:      rdiscount
-permalink:     pretty
-pygments:      true
